@@ -1,0 +1,21 @@
+<html t:type="loginLayout" title="warp"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+<div class="row">
+<div class="col-xs-4"></div>
+<div class="col-xs-4">
+    <div class="span4 offset3">
+        <t:form t:id="login">
+            <h2>Please sign in</h2>
+            <t:textfield t:id="loginId" class="input-block-level" validate="required" placeholder="Login Ig"/>
+            <hr/>
+            <t:passwordfield t:id="passwordKeyedIn" class="input-block-level" validate="required" placeholder="Password"/>
+            <hr/>
+            <t:submit class="btn btn-large btn-primary" value="Sign in"/>
+        </t:form>
+    </div>
+   </div>
+</div>
+<div class="col-xs-4"></div>
+</html>

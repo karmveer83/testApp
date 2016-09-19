@@ -1,0 +1,33 @@
+<html t:type="layout" title="Page Setup"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+        xmlns:p="tapestry:parameter">
+
+    <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+    	<div class="container">
+	    	<div  style="float: right;">
+	    	<button  >
+	    	<t:pagelink page="admin/TenantCreate">
+	    		  <b> Create New Tenant </b>
+	    	</t:pagelink>
+	    	</button>
+			 </div>
+		    <div class="panel panel-default">
+				      <div class="panel-heading">
+				     		<h4>  Tenant Maintenance</h4>
+				       </div>
+		   			 <div class="panel-body">
+							<t:grid id="grid" source="tenants"  row="tenant" add="action" rowsPerPage="10" pagerPosition="bottom" inplace="true">
+			                <p:actionCell >
+			                <button  >
+			                <t:pagelink page="admin/TenantDetail" context="tenant.tenantId" href="#">View</t:pagelink>
+			                </button  >
+			                <button  >
+			                <t:pagelink page="admin/TenantEdit" context="tenant.tenantId"  href="#">Edit</t:pagelink>
+							 </button  >
+							 </p:actionCell>
+							 </t:grid>
+					</div>
+   		 	</div>
+ 		</div>
+</html>

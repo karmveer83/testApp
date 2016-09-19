@@ -1,0 +1,57 @@
+<html t:type="layout" title="Page Setup"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+        xmlns:p="tapestry:parameter">
+
+    <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    	<div class="container">
+    	<div  style="float: right;">
+    	<button  >
+    	<t:pagelink page="appsetup/PageSetupCreate">
+    		  <b> Create New Page Setup </b>
+    	</t:pagelink>
+    	</button>
+		 </div>
+		    <div class="panel panel-default">
+		      <div class="panel-heading">
+		     <h4>  Maintain Page Setup</h4>
+		       </div>
+   			 <div class="panel-body">
+			
+					<div class="eg">
+				        <t:form t:id="filterCriteria" async="true" class="form-inline">
+				        
+				            <!-- On change of a Select, we do an javascript click of an invisible submit button.
+				                Note: do not use "this.form.performSubmit()" because on an AJAX Form it fails in Firefox. -->
+				    
+				            <div class="form-group">
+				                <t:label for="navBarHeader"/>: 
+				                <t:select t:id="navBarHeader" model="navBarHeaders" onchange="document.getElementById('filterSubmit').click()" secure="never"/>
+				            </div>
+				       
+				            <div class="form-group">
+				                <t:submit t:id="filterSubmit" id="filterSubmit" style="display: none;"/>
+				            </div>
+				        </t:form>
+
+			        			<div>
+					            <t:zone t:id="pageListZone" id="pageListZone">
+					                <t:grid id="grid" source="actionURLs"  row="actionURL" include="actionURLPageName,actionURLPageTitle,urlGroup,urlGroupOrder,urlPlacement,urlPlacementOrder" add="action" rowsPerPage="10" pagerPosition="bottom" inplace="true">
+					                <p:actionCell >
+					                <button  >
+					                <t:pagelink page="appsetup/PageSetupDetail" context="actionURL.actionURLId" href="#">View</t:pagelink>
+					                </button  >
+					                <button  >
+					                <t:pagelink page="appsetup/PageSetupEdit" context="actionURL.actionURLId" href="#">Edit</t:pagelink>
+                					 </button  >
+                					 </p:actionCell>
+                					 
+					                 </t:grid>
+					            </t:zone>
+			       		 		</div>
+   		 			</div>
+				</div>
+ 			</div>
+ 		</div>
+</html>

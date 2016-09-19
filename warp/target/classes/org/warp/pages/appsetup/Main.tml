@@ -1,0 +1,17 @@
+<html t:type="layout" title="Application Setup"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+        >
+
+
+    <div class="panel panel-default">
+	    <div class="panel-heading">
+	 <h4>Application Setup Module</h4>
+   </div>
+         <div class="panel-body">
+        Click on the tabs on the right to perfor application setup activities
+           </div>
+        
+    </div>
+
+
+</html>

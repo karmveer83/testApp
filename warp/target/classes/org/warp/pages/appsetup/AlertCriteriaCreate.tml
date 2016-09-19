@@ -1,0 +1,30 @@
+<html t:type="layout" title="Page Setup"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+        xmlns:p="tapestry:parameter">
+
+    <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    	<div class="container">
+    	<div  style="float: right;">
+    	<button  >
+    	<t:pagelink page="appsetup/AlertCriteriaSetup">
+    		  <b> Back to Alert Criteria Setup </b>
+    	</t:pagelink>
+    	</button>
+		 </div>
+		      
+		    <div class="panel panel-default">
+		      <div class="panel-heading">
+		     <h4>  Create new AlertCriteria</h4>
+
+		      </div>
+   			 <div class="panel-body">
+				<div class="eg">
+				        <t:beaneditform t:id="alertCriteriaCreateForm" exclude="createdDt,lastUpdatedDt" object="alertCriteria"  submitLabel="Save"/>
+				        <t:eventlink event="refresh">Refresh</t:eventlink>
+				    </div>
+				</div>
+ 			</div>
+ 		</div>
+</html>

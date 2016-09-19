@@ -1,0 +1,196 @@
+EXCEPTION STACK:
+
+
+        Exception: org.apache.tapestry5.ioc.internal.OperationException
+          Message: Failure writing parameter 'value' of component core/PropertyEditBlocks:datefield: Could not find a coercion from type java.util.Date to type java.sql.Timestamp.
+         location: classpath:org/apache/tapestry5/corelib/components/BeanEditForm.tml, line 2
+            trace: Handling traditional 'action' component event request for admin/CommonConfigEdit:commonconfigform.form.
+                   Triggering event 'action' on admin/CommonConfigEdit:commonconfigform.form
+
+        Exception: org.apache.tapestry5.runtime.ComponentEventException
+          Message: Failure writing parameter 'value' of component core/PropertyEditBlocks:datefield: Could not find a coercion from type java.util.Date to type java.sql.Timestamp.
+          context: org.apache.tapestry5.internal.EmptyEventContext@19db0c7
+        eventType: action
+         location: classpath:org/apache/tapestry5/corelib/components/BeanEditForm.tml, line 2
+
+        Exception: org.apache.tapestry5.ioc.internal.util.TapestryException
+          Message: Failure writing parameter 'value' of component core/PropertyEditBlocks:datefield: Could not find a coercion from type java.util.Date to type java.sql.Timestamp.
+         location: classpath:org/apache/tapestry5/corelib/pages/PropertyEditBlocks.tml, line 27
+
+        Exception: org.apache.tapestry5.ioc.internal.util.TapestryException
+          Message: Could not find a coercion from type java.util.Date to type java.sql.Timestamp.
+         location: org.apache.tapestry5.corelib.pages.PropertyEditBlocks.dateField
+
+        Exception: org.apache.tapestry5.ioc.util.UnknownValueException
+          Message: Could not find a coercion from type java.util.Date to type java.sql.Timestamp.
+  availableValues: AvailableValues[Configured coercions: Double --> Float, Float --> Double, Long --> Byte, Long --> Double, Long --> Integer, Long --> Short, Number --> Boolean, Number --> Long, Object --> Boolean, Object --> Object[], Object --> String, Object --> java.util.List, Object[] --> Boolean, Object[] --> java.util.List, String --> Boolean, String --> Double, String --> Long, String --> java.io.File, String --> java.math.BigDecimal, String --> java.math.BigInteger, String --> java.text.DateFormat, String --> java.util.regex.Pattern, String --> org.apache.tapestry5.Renderable, String --> org.apache.tapestry5.SelectModel, String --> org.apache.tapestry5.ioc.Resource, String --> org.apache.tapestry5.ioc.util.TimeInterval, String --> org.apache.tapestry5.json.JSONArray, String --> org.apache.tapestry5.json.JSONObject, boolean[] --> java.util.List, byte[] --> java.util.List, char[] --> java.util.List, double[] --> java.util.List, float[] --> java.util.List, int[] --> java.util.List, java.math.BigDecimal --> Double, java.util.Collection --> Boolean, java.util.Collection --> Object[], java.util.Collection --> org.apache.tapestry5.grid.GridDataSource, java.util.Date --> java.util.Calendar, java.util.List --> org.apache.tapestry5.SelectModel, java.util.Map --> org.apache.tapestry5.SelectModel, long[] --> java.util.List, null --> Boolean, null --> org.apache.tapestry5.grid.GridDataSource, org.apache.tapestry5.Asset --> org.apache.tapestry5.ioc.Resource, org.apache.tapestry5.ComponentResources --> org.apache.tapestry5.PropertyOverrides, org.apache.tapestry5.Renderable --> org.apache.tapestry5.Block, org.apache.tapestry5.Renderable --> org.apache.tapestry5.runtime.RenderCommand, org.apache.tapestry5.ValueEncoder --> org.apache.tapestry5.services.ValueEncoderFactory, org.apache.tapestry5.func.Flow --> Boolean, org.apache.tapestry5.func.Flow --> java.util.List, org.apache.tapestry5.ioc.Resource --> org.apache.tapestry5.services.dynamic.DynamicTemplate, org.apache.tapestry5.ioc.util.TimeInterval --> Long, org.apache.tapestry5.runtime.ComponentResourcesAware --> org.apache.tapestry5.ComponentResources, short[] --> java.util.List]
+
+  Stack trace:
+
+  - org.apache.tapestry5.ioc.internal.services.TypeCoercerImpl.findOrCreateCoercion(TypeCoercerImpl.java:324)
+  - org.apache.tapestry5.ioc.internal.services.TypeCoercerImpl.access$000(TypeCoercerImpl.java:31)
+  - org.apache.tapestry5.ioc.internal.services.TypeCoercerImpl$TargetCoercion.getCoercion(TypeCoercerImpl.java:87)
+  - org.apache.tapestry5.ioc.internal.services.TypeCoercerImpl$TargetCoercion.coerce(TypeCoercerImpl.java:65)
+  - org.apache.tapestry5.ioc.internal.services.TypeCoercerImpl.coerce(TypeCoercerImpl.java:148)
+  - $TypeCoercer_98bc69191b24.coerce(Unknown Source)
+  - org.apache.tapestry5.internal.services.CoercingPropertyConduitWrapper.set(CoercingPropertyConduitWrapper.java:62)
+  - org.apache.tapestry5.corelib.components.PropertyEditor$1.setPropertyValue(PropertyEditor.java:206)
+  - $InternalPropertyConduit_98bc69191d8a.set(Unknown Source)
+  - org.apache.tapestry5.internal.bindings.PropBinding.set(PropBinding.java:76)
+  - org.apache.tapestry5.internal.transform.ParameterWorker$3$1.writeToBinding(ParameterWorker.java:298)
+  - org.apache.tapestry5.internal.transform.ParameterWorker$3$1.set(ParameterWorker.java:245)
+  - org.apache.tapestry5.corelib.components.DateField.conduit_set_value(DateField.java)
+  - org.apache.tapestry5.corelib.components.DateField.processSubmission(DateField.java:340)
+  - org.apache.tapestry5.corelib.base.AbstractField.processSubmission(AbstractField.java:260)
+  - org.apache.tapestry5.corelib.base.AbstractField.access$100(AbstractField.java:41)
+  - org.apache.tapestry5.corelib.base.AbstractField$ProcessSubmission.execute(AbstractField.java:103)
+  - org.apache.tapestry5.corelib.base.AbstractField$ProcessSubmission.execute(AbstractField.java:97)
+  - org.apache.tapestry5.corelib.components.Form.executeStoredActions(Form.java:738)
+  - org.apache.tapestry5.corelib.components.Form.onAction(Form.java:516)
+  - org.apache.tapestry5.corelib.components.Form.dispatchComponentEvent(Form.java)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.dispatchEvent(ComponentPageElementImpl.java:917)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.processEventTriggering(ComponentPageElementImpl.java:1102)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.access$3100(ComponentPageElementImpl.java:57)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1047)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1044)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1260)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementResourcesImpl.invoke(ComponentPageElementResourcesImpl.java:154)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.triggerContextEvent(ComponentPageElementImpl.java:1043)
+  - org.apache.tapestry5.internal.services.ComponentEventRequestHandlerImpl.handle(ComponentEventRequestHandlerImpl.java:73)
+  - org.apache.tapestry5.internal.services.AjaxFilter.handle(AjaxFilter.java:42)
+  - $ComponentEventRequestHandler_98bc69191c11.handle(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$37.handle(TapestryModule.java:2216)
+  - $ComponentEventRequestHandler_98bc69191c11.handle(Unknown Source)
+  - $ComponentEventRequestHandler_98bc69191b8f.handle(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentRequestHandlerTerminator.handleComponentEvent(ComponentRequestHandlerTerminator.java:43)
+  - org.apache.tapestry5.internal.services.DeferredResponseRenderer.handleComponentEvent(DeferredResponseRenderer.java:45)
+  - $ComponentRequestHandler_98bc69191b91.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.services.InitializeActivePageName.handleComponentEvent(InitializeActivePageName.java:39)
+  - $ComponentRequestHandler_98bc69191b91.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:55)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:52)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.perform(OperationTrackerImpl.java:110)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.perform(PerThreadOperationTracker.java:84)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.perform(RegistryImpl.java:1266)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker.handleComponentEvent(RequestOperationTracker.java:47)
+  - $ComponentRequestHandler_98bc69191b91.handleComponentEvent(Unknown Source)
+  - $ComponentRequestHandler_98bc69191b60.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentEventDispatcher.dispatch(ComponentEventDispatcher.java:48)
+  - $Dispatcher_98bc69191b62.dispatch(Unknown Source)
+  - $Dispatcher_98bc69191b57.dispatch(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$RequestHandlerTerminator.service(TapestryModule.java:305)
+  - org.warp.services.AppModule$1.service(AppModule.java:145)
+  - $RequestFilter_98bc69191b56.service(Unknown Source)
+  - $RequestHandler_98bc69191b58.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestErrorFilter.service(RequestErrorFilter.java:26)
+  - $RequestHandler_98bc69191b58.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$3.service(TapestryModule.java:846)
+  - $RequestHandler_98bc69191b58.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$2.service(TapestryModule.java:836)
+  - $RequestHandler_98bc69191b58.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.StaticFilesFilter.service(StaticFilesFilter.java:89)
+  - $RequestHandler_98bc69191b58.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:105)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:95)
+  - org.apache.tapestry5.ioc.internal.util.ConcurrentBarrier.withRead(ConcurrentBarrier.java:83)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter.service(CheckForUpdatesFilter.java:119)
+  - $RequestHandler_98bc69191b58.service(Unknown Source)
+  - $RequestHandler_98bc69191b4c.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$HttpServletRequestHandlerTerminator.service(TapestryModule.java:256)
+  - org.apache.tapestry5.internal.gzip.GZipFilter.service(GZipFilter.java:59)
+  - $HttpServletRequestHandler_98bc69191b4e.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.IgnoredPathsFilter.service(IgnoredPathsFilter.java:62)
+  - $HttpServletRequestFilter_98bc69191b49.service(Unknown Source)
+  - $HttpServletRequestHandler_98bc69191b4e.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$1.service(TapestryModule.java:796)
+  - $HttpServletRequestHandler_98bc69191b4e.service(Unknown Source)
+  - $HttpServletRequestHandler_98bc69191b48.service(Unknown Source)
+  - org.apache.tapestry5.TapestryFilter.doFilter(TapestryFilter.java:166)
+  - org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1148)
+  - org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:387)
+  - org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+  - org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+  - org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+  - org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:417)
+  - org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+  - org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+  - org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+  - org.mortbay.jetty.Server.handle(Server.java:324)
+  - org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:535)
+  - org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:880)
+  - org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:747)
+  - org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)
+  - org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+  - org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+  - org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:520)
+
+REQUEST:
+
+Basic Information:
+
+                contextPath: /warp
+                      flags: requestedSessionIdValid
+                     method: POST
+                       path: /admin/commonconfigedit.commonconfigform.form
+                     locale: en_US
+                 serverName: localhost
+                 remoteHost: 0:0:0:0:0:0:0:1
+
+Headers:
+
+                     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+            Accept-Encoding: gzip, deflate
+            Accept-Language: en-US,en;q=0.8
+              Cache-Control: max-age=0
+                 Connection: keep-alive
+             Content-Length: 957
+               Content-Type: application/x-www-form-urlencoded
+                     Cookie: JSESSIONID=ma7ncou13nka
+                       Host: localhost:8080
+                     Origin: http://localhost:8080
+                    Referer: http://localhost:8080/warp/admin/commonconfigedit/37
+  Upgrade-Insecure-Requests: 1
+                 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36
+
+Parameters:
+                  configKey: SITE_NAVBAR_HEADER_ADMIN
+                 configType: SITE_NAVBAR_HEADER
+                configValue: Admin
+                  createdDt: 9/18/2016
+              lastUpdatedDt: 
+                       t:ac: 37
+                 t:formdata: FJs87JH+6yZqQyKlkxPL06L1Vu4=:H4sIAAAAAAAAAO2Wz2pTQRTGx0DVNii1UIs7hQi6cC6a1kWkaBtja42lEFtXIpN7z42j868zkyZZ6MqFvoQvUHXpUoQuxI2vID6AGxU3unDm3ooGoeTehtJFVwOH88338TszzLz8gkY6FxEmEaciqErOpahKEdNWLaK2EiaFMCnEUnMMrio1MhpVpG5hokj4ALAlCozVvRkcSg2MNt3KlRQgrMHzQEQtkZVWNCii4e74cnGz++ZUAaGu6lxG5WzumEmpfAQ8aIS6E5QufVXx+YWTm1f31rb87tzTxfL3Vyi1vYZmM9oqLRVo2/uLfmHQACvb0m38DbBtVRMbVEvBXcPSicL6p3JwoYAO1dHRPz4WTdQfkg0SMCJaQcNqKlpXusqi0TTbLeh1SuiMtwv+NZhnMnxkKha6NqbAIp90ZsekTWIAzzVdkYT2htekEc+ubhU/T77/leQqOlerJVsmHNbRE3QkZ5S5rFHchiEY02g3OTWGSrH1OpqOf7z4OLxB3sw5yCpzd6pvlHzt7ePTi1M/9/ZsTw/lSvmpjgyBp9/nsEVjaeednoIBD4cXjuUQet3x3Qf324zvBt7EPiFfTDvXCGtnRJ9decC+n/1oqIFYiK7bnfhFrqWffFbdAfd+7scYMXZVRXnY59HuH/65fo21HL/G/1+7+7eXnn+49+1Z8uz8Br3JbHHDCgAA
+                   t:submit: ["",""]
+
+SESSION:
+
+                   sso:org.apache.tapestry5.alerts.AlertStorage: org.apache.tapestry5.alerts.AlertStorage@d121f8
+      state:admin/CommonConfigSetup:grid:defaultPaginationModel: GridPaginationModelImpl[currentPage=null, sortColumnId=configType, sortAscending=true]
+            state:admin/TenantSetup:grid:defaultPaginationModel: GridPaginationModelImpl[currentPage=null, sortColumnId=tenantName, sortAscending=true]
+  state:appsetup/AlertCriteriaSetup:grid:defaultPaginationModel: GridPaginationModelImpl[currentPage=null, sortColumnId=actionURLPageName, sortAscending=true]
+           state:appsetup/PageSetup:grid:defaultPaginationModel: GridPaginationModelImpl[currentPage=null, sortColumnId=actionURLPageName, sortAscending=true]
+
+SYSTEM INFORMATION:
+
+Memory:
+       20,193,264 bytes free
+       43,593,728 bytes total
+      608,174,080 bytes max
+
+14 Threads:
+                                                        Reference Handler WAITING, daemon, priority 10
+                                                                Finalizer WAITING, daemon, priority 8
+                                                        Signal Dispatcher RUNNABLE, daemon, priority 9
+                                                          Attach Listener RUNNABLE, daemon
+                                                                     main WAITING
+  14329722@qtp-24541057-1 - Acceptor0 SelectChannelConnector@0.0.0.0:8080 RUNNABLE
+                                                                  Timer-0 TIMED_WAITING, daemon
+                                                          pool-1-thread-1 TIMED_WAITING
+                                                 11217162@qtp-24541057-11 TIMED_WAITING
+*                                                29945710@qtp-24541057-12 RUNNABLE
+                                                 14110660@qtp-24541057-14 TIMED_WAITING
+                                                 15344672@qtp-24541057-15 TIMED_WAITING
+                                                 25873742@qtp-24541057-16 TIMED_WAITING
+                                                 32600616@qtp-24541057-17 TIMED_WAITING

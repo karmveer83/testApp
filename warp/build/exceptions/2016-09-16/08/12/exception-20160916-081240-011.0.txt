@@ -1,0 +1,202 @@
+EXCEPTION STACK:
+
+
+  Exception: org.apache.tapestry5.runtime.ComponentEventException
+    Message: Failure reading parameter 'model' of component appsetup/PageSetup:grid: Unable to determine the bean type for rows from org.apache.tapestry5.internal.grid.NullDataSource@2b6955. You should bind the model parameter explicitly.
+    context: org.apache.tapestry5.internal.EmptyEventContext@7db37b
+  eventType: action
+   location: classpath:org/warp/pages/appsetup/PageSetup.tml, line 16
+
+  Exception: org.apache.tapestry5.ioc.internal.OperationException
+    Message: Failure reading parameter 'model' of component appsetup/PageSetup:grid: Unable to determine the bean type for rows from org.apache.tapestry5.internal.grid.NullDataSource@2b6955. You should bind the model parameter explicitly.
+   location: classpath:org/warp/pages/appsetup/PageSetup.tml, line 16
+      trace: Handling Ajax 'action' component event request for appsetup/PageSetup:filtercriteria.
+             Triggering event 'action' on appsetup/PageSetup:filtercriteria
+             Triggering event 'validate' on appsetup/PageSetup:filtercriteria
+
+  Exception: org.apache.tapestry5.runtime.ComponentEventException
+    Message: Failure reading parameter 'model' of component appsetup/PageSetup:grid: Unable to determine the bean type for rows from org.apache.tapestry5.internal.grid.NullDataSource@2b6955. You should bind the model parameter explicitly.
+    context: org.apache.tapestry5.internal.EmptyEventContext@7db37b
+  eventType: validate
+   location: classpath:org/warp/pages/appsetup/PageSetup.tml, line 16
+
+  Exception: org.apache.tapestry5.ioc.internal.util.TapestryException
+    Message: Failure reading parameter 'model' of component appsetup/PageSetup:grid: Unable to determine the bean type for rows from org.apache.tapestry5.internal.grid.NullDataSource@2b6955. You should bind the model parameter explicitly.
+
+  Exception: java.lang.RuntimeException
+    Message: Unable to determine the bean type for rows from org.apache.tapestry5.internal.grid.NullDataSource@2b6955. You should bind the model parameter explicitly.
+
+  Stack trace:
+
+  - org.apache.tapestry5.corelib.components.Grid$1.get(Grid.java:414)
+  - org.apache.tapestry5.internal.transform.ParameterWorker$3$1.readFromBinding(ParameterWorker.java:263)
+  - org.apache.tapestry5.internal.transform.ParameterWorker$3$1.get(ParameterWorker.java:381)
+  - org.apache.tapestry5.corelib.components.Grid.conduit_get_model(Grid.java)
+  - org.apache.tapestry5.corelib.components.Grid.getDataModel(Grid.java:556)
+  - org.apache.tapestry5.corelib.components.Grid$DefaultGridSortModel.getSortConstraints(Grid.java:373)
+  - org.warp.pages.appsetup.PageSetup.onValidateFromFilterCriteria(PageSetup.java:73)
+  - org.warp.pages.appsetup.PageSetup.advised$dispatchComponentEvent_12e2a6a335cfc(PageSetup.java)
+  - org.warp.pages.appsetup.PageSetup$Invocation_dispatchComponentEvent_12e2a6a335cfb.proceedToAdvisedMethod(Unknown Source)
+  - org.apache.tapestry5.internal.plastic.AbstractMethodInvocation.proceed(AbstractMethodInvocation.java:90)
+  - org.apache.tapestry5.internal.services.ComponentInstantiatorSourceImpl$EventMethodAdvice.advise(ComponentInstantiatorSourceImpl.java:484)
+  - org.apache.tapestry5.internal.plastic.AbstractMethodInvocation.proceed(AbstractMethodInvocation.java:92)
+  - org.apache.tapestry5.internal.services.ComponentInstantiatorSourceImpl$EventMethodAdvice.advise(ComponentInstantiatorSourceImpl.java:484)
+  - org.apache.tapestry5.internal.plastic.AbstractMethodInvocation.proceed(AbstractMethodInvocation.java:92)
+  - org.apache.tapestry5.internal.services.ComponentInstantiatorSourceImpl$EventMethodAdvice.advise(ComponentInstantiatorSourceImpl.java:484)
+  - org.apache.tapestry5.internal.plastic.AbstractMethodInvocation.proceed(AbstractMethodInvocation.java:92)
+  - org.apache.tapestry5.internal.services.ComponentInstantiatorSourceImpl$EventMethodAdvice.advise(ComponentInstantiatorSourceImpl.java:484)
+  - org.apache.tapestry5.internal.plastic.AbstractMethodInvocation.proceed(AbstractMethodInvocation.java:92)
+  - org.warp.pages.appsetup.PageSetup.dispatchComponentEvent(PageSetup.java)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.dispatchEvent(ComponentPageElementImpl.java:917)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.processEventTriggering(ComponentPageElementImpl.java:1102)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.access$3100(ComponentPageElementImpl.java:57)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1047)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1044)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1260)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementResourcesImpl.invoke(ComponentPageElementResourcesImpl.java:154)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.triggerContextEvent(ComponentPageElementImpl.java:1043)
+  - org.apache.tapestry5.internal.structure.InternalComponentResourcesImpl.triggerContextEvent(InternalComponentResourcesImpl.java:288)
+  - org.apache.tapestry5.corelib.components.Form.fireValidateEvent(Form.java:673)
+  - org.apache.tapestry5.corelib.components.Form.onAction(Form.java:522)
+  - org.apache.tapestry5.corelib.components.Form.dispatchComponentEvent(Form.java)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.dispatchEvent(ComponentPageElementImpl.java:917)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.processEventTriggering(ComponentPageElementImpl.java:1102)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.access$3100(ComponentPageElementImpl.java:57)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1047)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1044)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1260)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementResourcesImpl.invoke(ComponentPageElementResourcesImpl.java:154)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.triggerContextEvent(ComponentPageElementImpl.java:1043)
+  - org.apache.tapestry5.internal.services.AjaxComponentEventRequestHandler.handle(AjaxComponentEventRequestHandler.java:110)
+  - org.apache.tapestry5.internal.services.ajax.AjaxFormUpdateFilter.handle(AjaxFormUpdateFilter.java:56)
+  - $ComponentEventRequestHandler_12e2a6a335e12.handle(Unknown Source)
+  - $ComponentEventRequestHandler_12e2a6a335e0d.handle(Unknown Source)
+  - org.apache.tapestry5.internal.services.AjaxFilter.handle(AjaxFilter.java:42)
+  - $ComponentEventRequestHandler_12e2a6a335e0e.handle(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$37.handle(TapestryModule.java:2216)
+  - $ComponentEventRequestHandler_12e2a6a335e0e.handle(Unknown Source)
+  - $ComponentEventRequestHandler_12e2a6a335d02.handle(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentRequestHandlerTerminator.handleComponentEvent(ComponentRequestHandlerTerminator.java:43)
+  - org.apache.tapestry5.internal.services.DeferredResponseRenderer.handleComponentEvent(DeferredResponseRenderer.java:45)
+  - $ComponentRequestHandler_12e2a6a335d04.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.services.InitializeActivePageName.handleComponentEvent(InitializeActivePageName.java:39)
+  - $ComponentRequestHandler_12e2a6a335d04.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:55)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:52)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.perform(OperationTrackerImpl.java:110)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.perform(PerThreadOperationTracker.java:84)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.perform(RegistryImpl.java:1266)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker.handleComponentEvent(RequestOperationTracker.java:47)
+  - $ComponentRequestHandler_12e2a6a335d04.handleComponentEvent(Unknown Source)
+  - $ComponentRequestHandler_12e2a6a335cc8.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentEventDispatcher.dispatch(ComponentEventDispatcher.java:48)
+  - $Dispatcher_12e2a6a335cca.dispatch(Unknown Source)
+  - $Dispatcher_12e2a6a335cbf.dispatch(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$RequestHandlerTerminator.service(TapestryModule.java:305)
+  - org.warp.services.AppModule$1.service(AppModule.java:127)
+  - $RequestFilter_12e2a6a335cbe.service(Unknown Source)
+  - $RequestHandler_12e2a6a335cc0.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestErrorFilter.service(RequestErrorFilter.java:26)
+  - $RequestHandler_12e2a6a335cc0.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$3.service(TapestryModule.java:846)
+  - $RequestHandler_12e2a6a335cc0.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$2.service(TapestryModule.java:836)
+  - $RequestHandler_12e2a6a335cc0.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.StaticFilesFilter.service(StaticFilesFilter.java:89)
+  - $RequestHandler_12e2a6a335cc0.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:105)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:95)
+  - org.apache.tapestry5.ioc.internal.util.ConcurrentBarrier.withRead(ConcurrentBarrier.java:83)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter.service(CheckForUpdatesFilter.java:119)
+  - $RequestHandler_12e2a6a335cc0.service(Unknown Source)
+  - $RequestHandler_12e2a6a335cb4.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$HttpServletRequestHandlerTerminator.service(TapestryModule.java:256)
+  - org.apache.tapestry5.internal.gzip.GZipFilter.service(GZipFilter.java:59)
+  - $HttpServletRequestHandler_12e2a6a335cb6.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.IgnoredPathsFilter.service(IgnoredPathsFilter.java:62)
+  - $HttpServletRequestFilter_12e2a6a335cb1.service(Unknown Source)
+  - $HttpServletRequestHandler_12e2a6a335cb6.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$1.service(TapestryModule.java:796)
+  - $HttpServletRequestHandler_12e2a6a335cb6.service(Unknown Source)
+  - $HttpServletRequestHandler_12e2a6a335cb0.service(Unknown Source)
+  - org.apache.tapestry5.TapestryFilter.doFilter(TapestryFilter.java:166)
+  - org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1148)
+  - org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:387)
+  - org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+  - org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+  - org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+  - org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:417)
+  - org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+  - org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+  - org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+  - org.mortbay.jetty.Server.handle(Server.java:324)
+  - org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:535)
+  - org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:880)
+  - org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:747)
+  - org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)
+  - org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+  - org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+  - org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:520)
+
+REQUEST:
+
+Basic Information:
+
+       contextPath: /warp
+             flags: XHR, requestedSessionIdValid
+            method: POST
+              path: /appsetup/pagesetup.filtercriteria
+            locale: en_US
+        serverName: localhost
+        remoteHost: 0:0:0:0:0:0:0:1
+
+Headers:
+
+            Accept: */*
+   Accept-Encoding: gzip, deflate
+   Accept-Language: en-US,en;q=0.8
+        Connection: keep-alive
+    Content-Length: 540
+      Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+            Cookie: JSESSIONID=14qovd5t5dffn
+              Host: localhost:8080
+            Origin: http://localhost:8080
+           Referer: http://localhost:8080/warp/appsetup/pagesetup
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
+  X-Requested-With: XMLHttpRequest
+
+Parameters:
+      navBarHeader: Monitor
+        t:formdata: tL4/iKXlGyo2oGpDBu75+Dv7orE=:H4sIAAAAAAAAAJWQsUoDQRCGxwNBiFXAwkoQbfca02hjFEThkMDhA8ztTS4re7vr7iTGxsqXsPEJxEqfIIWd7+AD2FhYpfBu0ymKdjM/M//389+/wfLlJmygc4F47NIBVpS3067BSYF+RFiSh+ChZ30l0KEckWB0FNhf9YS0nrQqRIGBRL9oRJR8pEiXW9Fm+2zWeV17niewlEFHWsPe6lOsiaGbneMEU42mSnP2ylR7U8ew2oAP0B9H8B+z9f+bbeCtpBDycVGrEJQ1s4dyZ/hx95IATN0P1KHSTD60P9xS93+lSls7a8hwEBHD36G3+fv60+PNYQJJBitSq+b6pLyA61gWaaoboS0rSrGcRYaF4Zf1E4Kf7OXMAQAA
+          t:submit: ["filterSubmit","filterSubmit"]
+
+SESSION:
+
+  state:appsetup/PageSetup:grid:defaultPaginationModel: GridPaginationModelImpl[currentPage=null, sortColumnId=actionURLPageName, sortAscending=true]
+
+SYSTEM INFORMATION:
+
+Memory:
+       28,550,944 bytes free
+       56,008,704 bytes total
+      608,174,080 bytes max
+
+14 Threads:
+                                                       Reference Handler WAITING, daemon, priority 10
+                                                               Finalizer WAITING, daemon, priority 8
+                                                       Signal Dispatcher RUNNABLE, daemon, priority 9
+                                                         Attach Listener RUNNABLE, daemon
+                                                                    main WAITING
+                                                  4584890@qtp-14503204-0 TIMED_WAITING
+  3221115@qtp-14503204-1 - Acceptor0 SelectChannelConnector@0.0.0.0:8080 RUNNABLE
+                                                                 Timer-0 TIMED_WAITING, daemon
+                                                 11430437@qtp-14503204-3 TIMED_WAITING
+                                                  5188293@qtp-14503204-4 TIMED_WAITING
+                                                         pool-1-thread-1 TIMED_WAITING
+*                                                10733268@qtp-14503204-5 RUNNABLE
+                                                 18074759@qtp-14503204-6 TIMED_WAITING
+                                                  9642254@qtp-14503204-7 TIMED_WAITING

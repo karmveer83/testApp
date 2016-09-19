@@ -1,0 +1,57 @@
+<html t:type="layout" title="Page Setup"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+        xmlns:p="tapestry:parameter">
+
+    <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    	<div class="container">
+    	<div  style="float: right;">
+    	<button  >
+    	<t:pagelink page="appsetup/MaintenanceWindowCreate">
+    		  <b> Create New Maintenance Window </b>
+    	</t:pagelink>
+    	</button>
+		 </div>
+		    <div class="panel panel-default">
+		      <div class="panel-heading">
+		     <h4>  Maintaintenance Window Setup</h4>
+		       </div>
+   			 <div class="panel-body">
+			
+					<div class="eg">
+				        <t:form t:id="filterCriteria" async="true" class="form-inline">
+				        
+				            <!-- On change of a Select, we do an javascript click of an invisible submit button.
+				                Note: do not use "this.form.performSubmit()" because on an AJAX Form it fails in Firefox. -->
+				    
+				            <div class="form-group">
+				                <t:label for="application"/>: 
+				                <t:select t:id="application" model="applications" onchange="document.getElementById('filterSubmit').click()" secure="never"/>
+				            </div>
+				       
+				            <div class="form-group">
+				                <t:submit t:id="filterSubmit" id="filterSubmit" style="display: none;"/>
+				            </div>
+				        </t:form>
+
+			        			<div>
+					            <t:zone t:id="maintenanceWindowListZone" id="maintenanceWindowListZone">
+					                <t:grid id="grid" source="maintenanceWindows"  row="maintenanceWindow" exclude="createdDt,lastUpdatedDt" add="action" rowsPerPage="10" pagerPosition="bottom" inplace="true">
+					                <p:actionCell >
+					                <button  >
+					                <t:pagelink page="appsetup/MaintenanceWindowDetail" context="maintenanceWindow.maintenanceWindowId" href="#">View</t:pagelink>
+					                </button  >
+					                <button  >
+					                <t:pagelink page="appsetup/MaintenanceWindowEdit" context="maintenanceWindow.maintenanceWindowId" href="#">Edit</t:pagelink>
+                					 </button  >
+                					 </p:actionCell>
+                					 
+					                 </t:grid>
+					            </t:zone>
+			       		 		</div>
+   		 			</div>
+				</div>
+ 			</div>
+ 		</div>
+</html>
